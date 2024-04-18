@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: PaymentService
+  config:
+    import: optional:configserver:http://localhost:8181
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8181

@@ -1,0 +1,26 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: EurekaServer
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+
+## eureka.client.register-with-eureka
+# Bu ayar, Eureka Server'in kendisini Eureka kayit defterine kaydetmesini önler.
+# Yani Eureka Server, kendi Eureka kayit defterine bir client olarak kaydolmaz.
+# Bu genellikle Eureka Server'in kendisini yönettigi durumlar için kullanilir
+# Çünkü bir Eureka Server'in diger Eureka Server'lara kaydolmasi gerekmez.
+# Bu yapilandirma, server'in sadece hizmet kayit defteri olarak islev görmesini saglamak için kullanilir.
+
+## eureka.client.fetch-registry
+# Bu ayar, Eureka Server'in diger Eureka Server'lardan kayit defterini çekmemesini saglar.
+# Bu, genellikle Eureka Server bir stand-alone yapilandirmada calistiginda veya sadece hizmet
+#kayitlarini almak yerine hizmet kayitlarini saglamak için kullanildiginda tercih edilir.
+# Eureka Server'in diger servislerin kayitlarini sürekli olarak güncel tutmasina gerek
+# yoktur, çünkü kendisi bir servis saglamaz, sadece kayitlari yönetir.

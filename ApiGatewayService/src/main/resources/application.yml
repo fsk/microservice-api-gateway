@@ -1,0 +1,7 @@
+server:
+  port: 1905
+
+spring:
+  application:
+    name: ApiGatewayService
+
